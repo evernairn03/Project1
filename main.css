@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+    --size: 200;
+    --color: hsl(0, 0%, 98%);
+    --colors: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #72A0C1; 
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Secular One', sans-serif;
+    font-size: clamp(18px, 1vw, 24px);
+    background-color: #72A0C1;  
+    color: #F0F8FF;
+    min-height: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    padding: 20px 30px;
+    position: sticky;
+    background-color: #002244; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > * {
+    flex: 1 1 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 50px;   
+    height: auto;   
+    max-width: 100%;
+}
+
+.logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo div p {
+    font-size: 1.5rem; 
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo .aztec {
+    color: #F0F8FF; 
+}
+
+.logo .legacy {
+    color: #FF0;
+}
+
+.fab {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-right: 10px;
+}
+
+nav ul.menu {
+    transform-origin: top;
+    transform: scaleY(0);
+    animation: animate 0.3s linear forwards;
+}
+
+nav ul.menu li {
+    flex: 1;
+    position: relative;
+}
+
+nav ul:not(.logo) li:not(.active):hover::before {
+    transform: scale(0.9);
+}
+
+.fa {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; 
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #004b8d;
+}
+
+li.active::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    background: #ff0;
+    padding: 1px 0;
+    transform-origin: center;
+    transform: scaleX(0.7);
+}
+
+.wrapper {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.main_content {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: flex-start;   
+    flex-wrap: wrap;  
+    margin-top: 50px;          
+}
+
+.leftPanel {
+    flex: 1 1 50%;              
+    padding-right: 20px;       
+}
+
+.leftPanel h1 {
+    font-size: clamp(20px, 3rem, 40px); 
+    margin-bottom: 10px;
+    color: #FF0;  
+    line-height: 1.2;
+    white-space: normal;
+}
+
+.yellow-text {
+    color:#FF0;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+.aztec-text {
+    font-family: 'AztecFont', sans-serif;
+    font-weight: 900;
+    color: #F0F8FF;
+    font-size: 1.2em;
+}
+
+.leftPanel p {
+    color: #13274F; 
+    line-height: 1.5;
+    max-width: 100%; 
+    word-wrap: break-word; 
+}
+
+.rightPanel {
+    flex: 1 1 50%;             
+    display: flex;              
+    justify-content: center;   
+    align-items: center;        
+}
+
+.rightPanel img {
+    width: 100%;               
+    max-width: 100%;           
+    height: auto;               
+    object-fit: contain;        
+}
+
+.hamburger_menu {
+    position: absolute;
+    right: 2px;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.hamburger_menu i {
+    font-size: 3rem;
+    transition: all .3s;
+}
+
+.hamburger_menu.active i {
+    color: #ff0;
+}
+
+@media screen and (max-width: 974px) {
+    .main_content {
+        flex-direction: column; 
+    }
+
+    .leftPanel, .rightPanel {
+        flex: 1 1 100%;          
+        padding: 0 20px;         
+    }
+
+    nav {
+        flex-flow: column;
+        background: #004;
+        margin-bottom: 2%;
+    }
+
+    nav ul:not(.logo) {
+        flex-flow: column;
+        display: none;
+    }
+
+    .hamburger_menu.active ~ .menu {
+        display: initial;
+    }
+
+    .hamburger_menu {
+        display: flex;
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleY(1);
+    }
+}
+
