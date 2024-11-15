@@ -14,5 +14,10 @@ HTML
 CSS
 JAVASCRIPT
 
+Acknowledgement: 
+- **Inspiration for the Timeline**: Special thanks to **Riley Egge** for their insightful timeline design, which inspired the layout and functionality of this project's timeline feature.
+  
+- **Images**: The images used in this project were sourced from google images. The images are used for educational purposes and fall under the standard usage terms of Google Images.
+
 
 ![Capture](https://github.com/user-attachments/assets/468f7667-2b5b-4cc9-824d-13ab3a6bf8e9)
