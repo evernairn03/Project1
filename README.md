@@ -12,6 +12,7 @@ https://evernairn03.github.io/Project1/
 Built With
 HTML
 CSS
+JAVASCRIPT
 
 
 ![Capture](https://github.com/user-attachments/assets/468f7667-2b5b-4cc9-824d-13ab3a6bf8e9)
